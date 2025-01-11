@@ -11,8 +11,7 @@ const AddMedicineForm = () => {
   });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = (e) => {
@@ -26,8 +25,8 @@ const AddMedicineForm = () => {
       setFormData({
         medicineName: "",
         medicineDescription: "",
-        medicinePrice: "",
-        quantityAvailable: "",
+        medicinePrice: 0,
+        quantityAvailable: 0,
       });
     } else {
       alert("Please fill out all required fields!");

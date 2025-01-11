@@ -20,9 +20,9 @@ const MedicineList = () => {
       <h2>Medicine List</h2>
       {medicines.map((medicine) => (
         <div key={medicine.id}>
-          <span>{medicine.medicineName}</span> -{" "}
-          <span>{medicine.medicineDescription || "No description"}</span> -{" "}
-          <span>${medicine.medicinePrice}</span> -{" "}
+          <span>{medicine.medicineName}</span>
+          <span>{medicine.medicineDescription || "No description"}</span>
+          <span>Rs{medicine.medicinePrice}</span>
           <span>Stock: {medicine.quantityAvailable}</span>
           <input
             type="number"
